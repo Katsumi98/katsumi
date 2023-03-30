@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css2?family=Alkatra&display=swap" rel="stylesheet">
+</head>
+<style>
+
+
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&display=swap');
+.center { 
+    margin: auto;   
+  width: 50%;
+  color: #ffffff;
+  padding: 70px;
+  font-family: 'Alkatra', cursive;
+ }
+
+
+ *{
+  margin: 0;
+  padding: 0;
+}
+section{
+  position: relative;
+  width: 100%;
+  height: 120vh;
+  background: rgb(2,0,36);
+background: linear-gradient(178deg, rgba(2,0,36,1) 11%, rgba(9,121,113,1) 49%, rgba(0,212,255,1) 100%);
+  overflow: hidden;
+}
+section .air{
+  position: absolute;
+  
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url(https://1.bp.blogspot.com/-xQUc-TovqDk/XdxogmMqIRI/AAAAAAAACvI/AizpnE509UMGBcTiLJ58BC6iViPYGYQfQCLcBGAsYHQ/s1600/wave.png);
+  background-size: 1000px 100px
+}
+section .air.air1{
+  animation: wave 30s linear infinite;
+  z-index: 1000;
+  opacity: 1;
+  animation-delay: 0s;
+  bottom: 0;
+}
+section .air.air2{
+  animation: wave2 15s linear infinite;
+  z-index: 999;
+  opacity: 0.5;
+  animation-delay: -5s;
+  bottom: 10px;
+}
+section .air.air3{
+  animation: wave 30s linear infinite;
+  z-index: 998;
+  opacity: 0.2;
+  animation-delay: -2s;
+  bottom: 15px;
+}
+section .air.air4{
+  animation: wave2 5s linear infinite;
+  z-index: 997;
+  opacity: 0.7;
+  animation-delay: -5s;
+  bottom: 20px;
+}
+@keyframes wave{
+  0%{
+    background-position-x: 0px; 
+  }
+  100%{
+    background-position-x: 1000px; 
+  }
+}
+@keyframes wave2{
+  0%{
+    background-position-x: 0px; 
+  }
+  100%{
+    background-position-x: -1000px; 
+  }
+}
+nav {
+  position: absolute;
+  top: 5%;
+  right: 0;
+  left: 0;
+  width: 319px;
+  display: table;
+  margin: 0 auto;
+  transform: translateY(-50%);
+}
+
+nav a {
+  position: relative;
+  width: 33.333%;
+  display: table-cell;
+  text-align: center;
+  color: #949494;
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  padding: 10px 20px;
+  transition: 0.2s ease color;
+}
+
+nav a:before,
+nav a:after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 0.2s ease transform;
+}
+
+nav a:before {
+  top: 0;
+  left: 10px;
+  width: 6px;
+  height: 6px;
+}
+
+nav a:after {
+  top: 5px;
+  left: 18px;
+  width: 4px;
+  height: 4px;
+}
+
+nav a:nth-child(1):before {
+  background-color: yellow;
+}
+
+nav a:nth-child(1):after {
+  background-color: red;
+}
+
+nav a:nth-child(2):before {
+  background-color: #00e2ff;
+}
+
+nav a:nth-child(2):after {
+  background-color: #89ff00;
+}
+
+nav a:nth-child(3):before {
+  background-color: purple;
+}
+
+nav a:nth-child(3):after {
+  background-color: palevioletred;
+}
+
+#indicator {
+  position: absolute;
+  left: 5%;
+  bottom: 0;
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 5px;
+  transition: 0.2s ease left;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+nav a:hover:before,
+nav a:hover:after {
+  transform: scale(1);
+}
+
+nav a:nth-child(1):hover ~ #indicator {
+  background: linear-gradient(130deg, yellow, red);
+}
+
+nav a:nth-child(2):hover ~ #indicator {
+  left: 34%;
+  background: linear-gradient(130deg, #00e2ff, #89ff00);
+}
+
+nav a:nth-child(3):hover ~ #indicator {
+  left: 70%;
+  background: linear-gradient(130deg, purple, palevioletred);
+}
+
+
+ .rcorners1 {
+    position: absolute;
+  top: 150px;
+  right: 16px;
+  border-radius: 15px 50px 30px;
+  background: #ffffff;
+  padding: 20px; 
+  width: 280px;
+  height: 50px; 
+  
+}
+
+
+.rcorners2 {
+    position: absolute;
+  top: 250px;
+  left: 16px;
+  
+  border-radius: 30px 50px 15px;
+  background: #ffffff;
+  padding: 20px; 
+  width: 250px;
+  height: 30px; 
+}
+.rcorners3 {
+    position: absolute;
+  top: 330px;
+  left: 50px;
+  border-radius: 100px / 25px;
+  background: #ffffff;
+  padding: 20px; 
+  width: 300px;
+  height: 230px; 
+}
+
+img {
+  position: relative;
+  top: -27px;
+  display: block;
+  margin-left: auto;
+  margin-right: 12px;
+}
+
+</style>
+<body>
+  
+    <section>
+      <nav>
+        <a href="#">HOME</a>
+        <a href="#">CODING</a>
+        <a href="#">GUITAR</a>
+        <div id="indicator"></div>
+      </nav>
+        <div class="center">
+           <h1 align="center">Biaya Produksi Toko Online</h1>
+        </div>
+        
+        <div class='air air1'></div>
+        <div class='air air2'></div>
+        <div class='air air3'></div>
+        <div class='air air4'></div>
+      </section>
+    
+   
+
+    <div class="rcorners1">
+        <h3><b>1.Biaya hosting dan domain:  Rp.170.000,00,-</h3></b>
+        <img src="an.jpg" alt="" style="width:30%">
+    </div>
+    
+    <div class="rcorners2">
+        <h3><b>2.Biaya Pembuatan Menu:</h3></b>
+    </div>
+
+    <div class="rcorners3">
+        <h4><b>
+            A.Login dan regrestasi:Rp.100.000,00,-<br>
+            B.Profil Pembeli:Rp.200.000,00,-<br>
+            C.Pengaturan:<br>
+            D.Pembuatan menu utama:<br>
+            F.Pembuatan Halaman:<br>
+            G.Notifikasi:<br>
+            H.Keranjang:<br>
+            I.Halaman Pembayaran:<br>
+            J.Kategori:<br>
+            K.Halaman Detain Produk:<br>
+            L.Halaman Feedback:<br>
+        </h4></b>
+    </div>
+</body>
+</html>
